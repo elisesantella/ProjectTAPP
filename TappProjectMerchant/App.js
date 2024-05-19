@@ -3,6 +3,7 @@ import {  StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Load from './Load';
+import Start from './Start';
 
 //Creating stack Navigator for react navigation component
 const Stack = createNativeStackNavigator();
@@ -12,10 +13,13 @@ export default function App()
 {
   return (
     <NavigationContainer>
-    <Stack.Navigator> 
+    <Stack.Navigator initialRouteName='Load'> 
       <Stack.Screen
          options={{ headerShown: false }}
         name= "Load" component={Load}/>
+        <Stack.Screen
+         options={{ headerShown: false }}
+        name= "Start" component={Start}/>
     </Stack.Navigator>
     </NavigationContainer>
   );
