@@ -4,6 +4,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Load from './Load';
 import Start from './Start';
+import SignIn from './SignIn';
+import CreateAccount from './CreateAccount';
 
 //Creating stack Navigator for react navigation component
 const Stack = createNativeStackNavigator();
@@ -20,6 +22,12 @@ export default function App()
         <Stack.Screen
          options={{ headerShown: false }}
         name= "Start" component={Start}/>
+        <Stack.Screen
+         options={{ headerShown: false }}
+        name= "SignIn" component={SignIn}/>
+        <Stack.Screen
+         options={{ headerShown: false }}
+        name= "CreateAccount" component={CreateAccount}/>
     </Stack.Navigator>
     </NavigationContainer>
   );
